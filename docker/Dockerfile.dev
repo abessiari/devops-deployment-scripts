@@ -2,7 +2,8 @@ FROM ubuntu:22.10
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get -u -y install lsb-release python3 binutils python3-venv python3-pip wget git emacs-nox bash-completion vim
+# RUN apt-get update && apt-get -u -y install lsb-release python3 binutils python3-venv python3-pip wget git emacs-nox bash-completion vim
+RUN apt-get update && apt-get -u -y install python3 binutils python3-venv python3-pip wget git emacs-nox bash-completion vim
 
 # RUN wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | tee /usr/share/keyrings/hashicorp-archive-keyring.gpg \
 #    && echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" \
