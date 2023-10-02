@@ -18,6 +18,10 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       
+      - name: Pull Image
+        run: |
+          docker pull geneontology/go-devops-base:actions 
+
       - name: Run Tests 
         run: |
           docker run --rm \
